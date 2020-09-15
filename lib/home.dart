@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:vestige/login.dart';
+import 'package:vestige/supermarket/target.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -102,55 +103,63 @@ class _HomeState extends State<Home> {
             ),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Card(
-                color: Hexcolor('#FFE8F7'),
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.15,
-                  width: MediaQuery.of(context).size.width * 1,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Container(
-                          height: 100,
-                          width: 100,
-                          child: Image.network(
-                              'https://cdn.freelogovectors.net/wp-content/uploads/2019/10/target-logo.png'),
+              child: InkWell(
+                child: Card(
+                  color: Hexcolor('#FFE8F7'),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.15,
+                    width: MediaQuery.of(context).size.width * 1,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            height: 100,
+                            width: 100,
+                            child: Image.network(
+                                'https://cdn.freelogovectors.net/wp-content/uploads/2019/10/target-logo.png'),
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(10.0, 10, 0, 0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding:
-                                  const EdgeInsets.fromLTRB(10.0, 10, 10, 5),
-                              child: Text(
-                                "Target",
-                                style: TextStyle(
-                                    fontFamily: 'Poppins', fontSize: 17),
-                              ),
-                            ),
-                            Container(
-                              width: MediaQuery.of(context).size.width * 0.5,
-                              child: Padding(
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(10.0, 10, 0, 0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
                                 padding:
                                     const EdgeInsets.fromLTRB(10.0, 10, 10, 5),
                                 child: Text(
-                                  "112 W 34th St, New York, NY 10120, United States",
+                                  "Target",
                                   style: TextStyle(
-                                      fontFamily: 'Poppins', fontSize: 12),
+                                      fontFamily: 'Poppins', fontSize: 17),
                                 ),
                               ),
-                            ),
-                          ],
+                              Container(
+                                width: MediaQuery.of(context).size.width * 0.5,
+                                child: Padding(
+                                  padding: const EdgeInsets.fromLTRB(
+                                      10.0, 10, 10, 5),
+                                  child: Text(
+                                    "112 W 34th St, New York, NY 10120, United States",
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins', fontSize: 12),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Target()),
+                  );
+                },
               ),
             ),
             Padding(
