@@ -45,6 +45,20 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(
+                Icons.logout,
+                color: Colors.black,
+              ),
+              onPressed: () {
+                signOutGoogle();
+                Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(builder: (context) {
+                  return Login();
+                }), ModalRoute.withName('/'));
+              }),
+        ],
         title: Text(
           "Welcome $name",
           style: TextStyle(color: Colors.black, fontFamily: 'Poppins'),
@@ -265,7 +279,7 @@ class _HomeState extends State<Home> {
                                   padding: const EdgeInsets.fromLTRB(
                                       10.0, 10, 10, 5),
                                   child: Text(
-                                    "77 Green Acres Rd S, Valley Stream, NY 11581, United States",
+                                    "77 Green Acres Rd S, NY 11581, United States",
                                     style: TextStyle(
                                         fontFamily: 'Poppins', fontSize: 12),
                                   ),

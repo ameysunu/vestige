@@ -185,7 +185,9 @@ class _SevenState extends State<Seven> {
                             Text(
                               "belVita Breakfast Biscuits",
                               style: TextStyle(
-                                  fontFamily: 'Poppins', color: Colors.black),
+                                  fontFamily: 'Poppins',
+                                  color: Colors.black,
+                                  fontSize: 12),
                             ),
                             Text(
                               "\$3.23",

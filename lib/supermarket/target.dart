@@ -218,7 +218,9 @@ class _TargetState extends State<Target> {
                             Text(
                               "Julian Bakery\nCereal",
                               style: TextStyle(
-                                  fontFamily: 'Poppins', color: Colors.black),
+                                  fontFamily: 'Poppins',
+                                  color: Colors.black,
+                                  fontSize: 12),
                             ),
                             Text(
                               "\$20.44",
@@ -272,7 +274,9 @@ class _TargetState extends State<Target> {
                             Text(
                               "belVita Breakfast Biscuits",
                               style: TextStyle(
-                                  fontFamily: 'Poppins', color: Colors.black),
+                                  fontFamily: 'Poppins',
+                                  color: Colors.black,
+                                  fontSize: 12),
                             ),
                             Text(
                               "\$3.23",
@@ -352,7 +356,9 @@ class _TargetState extends State<Target> {
                             Text(
                               "Welch's Fruit Snacks",
                               style: TextStyle(
-                                  fontFamily: 'Poppins', color: Colors.black),
+                                  fontFamily: 'Poppins',
+                                  color: Colors.black,
+                                  fontSize: 12),
                             ),
                             Text(
                               "\$3.12",
@@ -379,7 +385,9 @@ class _TargetState extends State<Target> {
                             Text(
                               " LUNCHABLES CHICKEN DUNKS",
                               style: TextStyle(
-                                  fontFamily: 'Poppins', color: Colors.black),
+                                  fontFamily: 'Poppins',
+                                  color: Colors.black,
+                                  fontSize: 12),
                             ),
                             Text(
                               "\$1.92",
@@ -406,7 +414,9 @@ class _TargetState extends State<Target> {
                             Text(
                               "Home-X Cheese\nand Crackers ",
                               style: TextStyle(
-                                  fontFamily: 'Poppins', color: Colors.black),
+                                  fontFamily: 'Poppins',
+                                  color: Colors.black,
+                                  fontSize: 12),
                             ),
                             Text(
                               "\$2.23",
