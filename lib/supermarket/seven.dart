@@ -319,7 +319,9 @@ class _SevenState extends State<Seven> {
                             Text(
                               "Home-X Cheese\nand Crackers ",
                               style: TextStyle(
-                                  fontFamily: 'Poppins', color: Colors.black),
+                                  fontFamily: 'Poppins',
+                                  color: Colors.black,
+                                  fontSize: 12),
                             ),
                             Text(
                               "\$2.23",
@@ -346,7 +348,9 @@ class _SevenState extends State<Seven> {
                             Text(
                               " LUNCHABLES CHICKEN DUNKS",
                               style: TextStyle(
-                                  fontFamily: 'Poppins', color: Colors.black),
+                                  fontFamily: 'Poppins',
+                                  color: Colors.black,
+                                  fontSize: 12),
                             ),
                             Text(
                               "\$1.92",
