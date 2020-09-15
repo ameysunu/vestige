@@ -1,0 +1,120 @@
+doctype html
+html
+  head
+    title Vestige
+    link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css")
+    
+    style.
+      nav{
+        background: #dec49b;
+      }
+      a{
+        color: black;
+      }
+      .jumbotron{
+      	background-color:  #151226;
+        height: 390px;
+        padding-top: 5%;
+        padding-right: 5%;
+      } 
+      .head{
+        font-size: 37px;
+      }
+      .body{
+        font-size: 19px;
+      }
+      .scrolldown{
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+      }
+      .scrolldowntext{
+        color: black;
+      }
+      #courses{
+        margin-top: 90px;
+      }
+      
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+      }
+    
+  body
+    nav.navbar.navbar-expand-lg.navbar-light.warning-color.lighten-5
+      a.navbar-brand(href='#') Vestige
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarNav.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='../')
+              | Home 
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='../about') About us
+          li.nav-item.active
+            a.nav-link(href='#') Shelter
+            
+            
+    br
+    br
+    .jumbotron
+      .container(style="color:#fff")
+        .row
+          .col-sm()
+            b
+              p.head Shelter Homes
+            br
+            p.body Volunteer with Vestige to provide shelter homes with these essential commodities offered by our partner Supermarkets and Restaurants. 
+            p.body Service available all 7 days of the week 
+            p.body Timing : 9:00 PM to 11:00 PM
+            
+          .col-sm(style="width:100%; margin-left: 250px")
+            svg.bi.bi-house-door-fill(width='14em' height='14em' viewbox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+              path(d='M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z')
+              path(fill-rule='evenodd' d='M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z')
+                
+            
+    #map
+    
+    script.
+      // Initialize and add the map
+      function initMap() {
+      // The location of Uluru
+      var uluru = {lat: -25.344, lng: 131.036};
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({position: uluru, map: map});
+      }
+    script(defer='' src='https://maps.googleapis.com/maps/api/js?key=initMap')
+
+    .container
+      br
+      br
+      br
+      h3 Volunteer with us!
+      p.body If you'd like to volunteer with us to deliver the commodities to those in need, send in your request to abc@vestige.com
+      br
+    br
+    br
+    hr
+    // Footer
+    footer.page-footer.font-small.indigo
+      // Footer Links
+      .container.text-center.text-md-left
+        .row
+          .col-md-3.mx-auto.text-center
+            p Vestige | 2020
+          .col-md-2.mx-auto
+          hr.clearfix.w-100.d-md-none
+          .col-md-2.mx-auto
+          hr.clearfix.w-100.d-md-none
+          .col-md-5.mx-auto.text-center
+              p Contact us at abc@vestige.com
+          .footer-copyright.text-center.py-3
+            p 
+    script(src='/bower_components/jquery/dist/js/bootstrap.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')

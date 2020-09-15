@@ -1,0 +1,3 @@
+website/.bowerrc
+website/node_modules/
+website/public/bower_components/
