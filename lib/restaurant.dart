@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -8,12 +7,12 @@ import 'package:vestige/supermarket/seven.dart';
 import 'package:vestige/supermarket/target.dart';
 import 'package:vestige/supermarket/walmart.dart';
 
-class Home extends StatefulWidget {
+class Restaurant extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _RestaurantState createState() => _RestaurantState();
 }
 
-class _HomeState extends State<Home> {
+class _RestaurantState extends State<Restaurant> {
   MapType _currentMapType = MapType.normal;
   BitmapDescriptor pinLocationIcon;
   Set<Marker> _markers = {};
@@ -30,13 +29,14 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    LatLng pinPosition = LatLng(40.749790, -73.989030); //Target
-    LatLng pinPosition1 = LatLng(40.744830, -73.997520); //7-Eleven
-    LatLng pinPosition2 = LatLng(40.660960, -73.726570); //Walmart
+    LatLng pinPosition = LatLng(40.713050, -74.007230); //Taco Bell- NYC
+    LatLng pinPosition1 =
+        LatLng(40.5758222, -73.9800833224914); //Grimaldi's Pizzeria
+    LatLng pinPosition2 = LatLng(40.6219444, -74.0225); //McDonald's
 
-    String positionOne = "Target";
-    String positionTwo = "7-Eleven";
-    String positionThree = "Walmart Supercenter";
+    String positionOne = "Taco Bell";
+    String positionTwo = "Grimaldi's Pizzeria";
+    String positionThree = "McDonald's";
     CameraPosition initialLocation =
         CameraPosition(zoom: 10, bearing: 30, target: pinPosition);
 
@@ -70,25 +70,25 @@ class _HomeState extends State<Home> {
                         position: pinPosition,
                         infoWindow: InfoWindow(
                           title: positionOne,
-                          snippet: 'Supermarker and Groceries',
+                          snippet: 'Restaurants',
                         ),
                         icon: pinLocationIcon));
 
                     _markers.add(Marker(
-                        markerId: MarkerId("7-Eleven"),
+                        markerId: MarkerId("Grimaldi's Pizzeria"),
                         position: pinPosition1,
                         infoWindow: InfoWindow(
                           title: positionTwo,
-                          snippet: 'Supermarker and Groceries',
+                          snippet: 'Restaurants',
                         ),
                         icon: pinLocationIcon));
 
                     _markers.add(Marker(
-                        markerId: MarkerId("Walmart Supercenter"),
+                        markerId: MarkerId("McDonald's"),
                         position: pinPosition2,
                         infoWindow: InfoWindow(
                           title: positionThree,
-                          snippet: 'Supermarker and Groceries',
+                          snippet: 'Restaurants',
                         ),
                         icon: pinLocationIcon));
                   });
@@ -98,7 +98,7 @@ class _HomeState extends State<Home> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
-                "Supermarkets near you",
+                "Restaurants near you",
                 style: TextStyle(
                     color: Colors.black, fontFamily: 'Poppins', fontSize: 20),
               ),
@@ -120,7 +120,7 @@ class _HomeState extends State<Home> {
                             height: 100,
                             width: 100,
                             child: Image.network(
-                                'https://cdn.freelogovectors.net/wp-content/uploads/2019/10/target-logo.png'),
+                                'https://cdn.freelogovectors.net/wp-content/uploads/2014/05/Taco_Bell_Logo_2016.png'),
                           ),
                         ),
                         Padding(
@@ -132,7 +132,7 @@ class _HomeState extends State<Home> {
                                 padding:
                                     const EdgeInsets.fromLTRB(10.0, 10, 10, 5),
                                 child: Text(
-                                  "Target",
+                                  "Taco Bell",
                                   style: TextStyle(
                                       fontFamily: 'Poppins', fontSize: 17),
                                 ),
@@ -143,7 +143,7 @@ class _HomeState extends State<Home> {
                                   padding: const EdgeInsets.fromLTRB(
                                       10.0, 10, 10, 5),
                                   child: Text(
-                                    "112 W 34th St, New York, NY 10120, United States",
+                                    " 500 8th Ave, New York, NY 10018, United States",
                                     style: TextStyle(
                                         fontFamily: 'Poppins', fontSize: 12),
                                   ),
@@ -181,7 +181,7 @@ class _HomeState extends State<Home> {
                             height: 100,
                             width: 100,
                             child: Image.network(
-                                'https://cdn.freelogovectors.net/wp-content/uploads/2018/04/7-ElevenLogo.png'),
+                                'https://upload.wikimedia.org/wikipedia/en/c/c7/Grimaldi%27s_Logo.jpg'),
                           ),
                         ),
                         Padding(
@@ -193,7 +193,7 @@ class _HomeState extends State<Home> {
                                 padding:
                                     const EdgeInsets.fromLTRB(10.0, 10, 10, 5),
                                 child: Text(
-                                  "7-Eleven",
+                                  "Grimaldi's Pizzeria",
                                   style: TextStyle(
                                       fontFamily: 'Poppins', fontSize: 17),
                                 ),
@@ -204,7 +204,7 @@ class _HomeState extends State<Home> {
                                   padding: const EdgeInsets.fromLTRB(
                                       10.0, 10, 10, 5),
                                   child: Text(
-                                    "246 W 23rd St, New York, NY 10011, United States",
+                                    "656 6th Ave, New York, NY 10010, United States",
                                     style: TextStyle(
                                         fontFamily: 'Poppins', fontSize: 12),
                                   ),
@@ -242,7 +242,7 @@ class _HomeState extends State<Home> {
                             height: 100,
                             width: 100,
                             child: Image.network(
-                                'https://cdn.freelogovectors.net/wp-content/uploads/2020/01/walmart-logo.png'),
+                                'https://cdn.freelogovectors.net/wp-content/uploads/2018/04/mcdonalds-logo.png'),
                           ),
                         ),
                         Padding(
@@ -254,7 +254,7 @@ class _HomeState extends State<Home> {
                                 padding:
                                     const EdgeInsets.fromLTRB(10.0, 10, 10, 5),
                                 child: Text(
-                                  "Walmart Supercenter",
+                                  "McDonald's",
                                   style: TextStyle(
                                       fontFamily: 'Poppins', fontSize: 17),
                                 ),
@@ -265,7 +265,7 @@ class _HomeState extends State<Home> {
                                   padding: const EdgeInsets.fromLTRB(
                                       10.0, 10, 10, 5),
                                   child: Text(
-                                    "77 Green Acres Rd S, Valley Stream, NY 11581, United States",
+                                    "490 8th Ave, New York, NY 10001, United States",
                                     style: TextStyle(
                                         fontFamily: 'Poppins', fontSize: 12),
                                   ),

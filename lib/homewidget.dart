@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:vestige/home.dart';
+import 'package:vestige/restaurant.dart';
 
 class HomeWidget extends StatefulWidget {
   @override
@@ -13,6 +14,7 @@ class _HomeWidgetState extends State<HomeWidget> {
 
   final List<Widget> _widgetOptions = [
     Home(),
+    Restaurant(),
   ];
 
   Widget build(BuildContext context) {
