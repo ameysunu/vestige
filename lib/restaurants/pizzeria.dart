@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class Tacobell extends StatefulWidget {
+class Pizzeria extends StatefulWidget {
   @override
-  _TacobellState createState() => _TacobellState();
+  _PizzeriaState createState() => _PizzeriaState();
 }
 
-class _TacobellState extends State<Tacobell> {
+class _PizzeriaState extends State<Pizzeria> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Hexcolor('#FFE8F7'),
+      backgroundColor: Hexcolor('#F2ECFF'),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Hexcolor('#FFE8F7'),
+        backgroundColor: Hexcolor('#F2ECFF'),
         iconTheme: IconThemeData(
           color: Colors.black,
         ),
         title: Text(
-          'Taco Bell',
+          'Grimaldi\'s Pizzeria',
           style: TextStyle(fontFamily: 'Poppins', color: Colors.black),
         ),
       ),
@@ -44,7 +44,7 @@ class _TacobellState extends State<Tacobell> {
                       height: 100,
                       width: 100,
                       child: Image.network(
-                          'https://i.ibb.co/6Pj6fpz/ezgif-com-webp-to-png-1.png'),
+                          'https://www.seriouseats.com/recipes/images/2015/07/20150702-mushroom-truffle-pizza-1.jpg'),
                     ),
                   ),
                   Column(
@@ -53,14 +53,14 @@ class _TacobellState extends State<Tacobell> {
                       Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Text(
-                          "Boss Burrito",
+                          "Portobello Napoleon",
                           style: TextStyle(fontFamily: "Poppins", fontSize: 20),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Text(
-                          "\$5.76",
+                          "\$10.00",
                           style: TextStyle(fontFamily: "Poppins", fontSize: 20),
                         ),
                       ),
@@ -81,7 +81,7 @@ class _TacobellState extends State<Tacobell> {
                       height: 100,
                       width: 100,
                       child: Image.network(
-                          'https://static.wixstatic.com/media/a5a6fb_d7c3153b6ec14e718b8625c72c3538a4~mv2.jpg/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.webp'),
+                          'https://www.deliciousmagazine.co.uk/wp-content/uploads/2018/09/476993-1-eng-GB_beef-meatballs-in-tomato-sauce-768x1024.jpg'),
                     ),
                   ),
                   Column(
@@ -90,14 +90,14 @@ class _TacobellState extends State<Tacobell> {
                       Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Text(
-                          "Double Tacos Supreme",
-                          style: TextStyle(fontFamily: "Poppins", fontSize: 20),
+                          "Meatballs in a Red Sauce",
+                          style: TextStyle(fontFamily: "Poppins", fontSize: 17),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Text(
-                          "\$8.98",
+                          "\$7.00",
                           style: TextStyle(fontFamily: "Poppins", fontSize: 20),
                         ),
                       ),
@@ -118,7 +118,7 @@ class _TacobellState extends State<Tacobell> {
                       height: 100,
                       width: 100,
                       child: Image.network(
-                          'https://i.ibb.co/fvQ98c8/ezgif-com-webp-to-png-2.png'),
+                          'https://www.cookingclassy.com/wp-content/uploads/2018/12/spinach-artichoke-dip-13-768x1148.jpg'),
                     ),
                   ),
                   Column(
@@ -127,14 +127,14 @@ class _TacobellState extends State<Tacobell> {
                       Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Text(
-                          "Crunchwrap Supreme™",
+                          "Spinach Artichoke Dip",
                           style: TextStyle(fontFamily: "Poppins", fontSize: 20),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Text(
-                          "\$12.32",
+                          "\$10.32",
                           style: TextStyle(fontFamily: "Poppins", fontSize: 20),
                         ),
                       ),

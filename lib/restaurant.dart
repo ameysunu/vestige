@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:vestige/login.dart';
+import 'package:vestige/restaurants/mcdonalds.dart';
+import 'package:vestige/restaurants/pizzeria.dart';
+import 'package:vestige/restaurants/tacobell.dart';
 import 'package:vestige/supermarket/seven.dart';
 import 'package:vestige/supermarket/target.dart';
 import 'package:vestige/supermarket/walmart.dart';
@@ -159,7 +162,7 @@ class _RestaurantState extends State<Restaurant> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Target()),
+                    MaterialPageRoute(builder: (context) => Tacobell()),
                   );
                 },
               ),
@@ -220,7 +223,7 @@ class _RestaurantState extends State<Restaurant> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Seven()),
+                    MaterialPageRoute(builder: (context) => Pizzeria()),
                   );
                 },
               ),
@@ -281,7 +284,7 @@ class _RestaurantState extends State<Restaurant> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Walmart()),
+                    MaterialPageRoute(builder: (context) => Donalds()),
                   );
                 },
               ),
